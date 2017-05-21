@@ -1,0 +1,51 @@
+.modal-open .modal {
+	background-color: rgba(0,0,0, .8);
+}
+
+.modal-title {
+	@include font-lato-700;
+	color: $cor-verde;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.modal-content {
+	box-shadow: none;
+	border:none;
+	@include border-radius(0);
+}
+
+.modal-header {
+	border-bottom: 2px solid $cor-cinza-claro;
+	padding: 25px 15px 5px 15px;
+}
+
+.modal-footer {
+	padding: 5px 15px 25px 15px;
+	border-top: none;
+}
+
+.form-group.in-50 {
+	width: 49%;
+	float: left;
+}
+
+.form-group.in-50:nth-child(odd){
+	padding-right: 15px;
+}
+
+form {
+	label {
+		@include font-lato-500;
+		font-size: 12px;
+		color: $cor-cinza;
+		text-transform: uppercase;
+	}
+}
+
+p {
+	font-size: 13px;
+	b {
+		@include font-lato-700;
+	}
+}

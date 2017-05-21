@@ -1,0 +1,519 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Usuários - Clínica Nutri e Saúde</title>
+        <!-- <link rel="icon" type="image/ico" href="assets/images/favicon.ico" /> -->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/foundation-icons.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <!--/ stylesheets -->
+
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!--/ modernizr -->
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">Você esta usando um browser<strong>desatualizado</strong>. Por favor, <a href="http://browsehappy.com/">atualize</a> e tenha uma melhor experiência.</p>
+        <![endif]-->
+        <section class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+
+                        <h1><a href="">Clínica Nutri e Saúde</a></h1>
+                       
+                    </div>
+
+                    <div class="col-md-8">
+
+                        <div class="row">
+                            <div class="col-md-10">
+                                <ul class="pull-right">
+                                    <li><a href="usuarios.html" class="usuarios">Usuários</a></li>
+                                    <li><a href="" class="btn btn-cinza">sair</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-10">
+                                <ul class="pull-right menu">
+                                    <li><a href="agendas.html">Agendas</a></li>
+                                    <li><a href="pacientes.html" class="">Pacientes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2>Usuários</h2>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="" class="btn btn-verde pull-right" data-toggle="modal" data-target="#modal-usuarios-novo">Adicionar usuário</a>
+                    </div>
+
+                    <div class="col-md-10">
+                        <div class="box">
+                            <table class="table table-hover">
+                                <thead> 
+                                    <tr> 
+                                        <th class="col-md-3">Nome</th>
+                                        <th class="col-md-3">Email</th>
+                                        <th class="col-md-2">Cargo</th>
+                                        <th class="col-md-2">Ações</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Flavia Garcia Abrahão</th>
+                                        <td>fganutri@gmail.com</td> 
+                                        <td>Nutricionista</td>
+                                        <td>
+                                            <a href="" class="btn btn-rosa btn-small" data-toggle="modal" data-target="#modal-editar-usuarios">Editar</a> 
+                                            <a href="" class="btn btn-cinza btn-small">Excluir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Elaine Braga</th>
+                                        <td>elaine@gmail.com</td>
+                                        <td>Médica</td>
+                                        <td>
+                                            <a href="" class="btn btn-rosa btn-small" data-toggle="modal" data-target="#modal-editar-usuarios">Editar</a> 
+                                            <a href="" class="btn btn-cinza btn-small">Excluir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marcelle Tendrih</th>
+                                        <td>marcelle@gmail.com</td>
+                                        <td>Nutricionista</td>
+                                        <td>
+                                            <a href="" class="btn btn-rosa btn-small" data-toggle="modal" data-target="#modal-editar-usuarios">Editar</a> 
+                                            <a href="" class="btn btn-cinza btn-small">Excluir</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fulana de tal</th>
+                                        <td>fulana@gmail.com</td>
+                                        <td>Secretária</td>
+                                        <td>
+                                            <a href="" class="btn btn-rosa btn-small" data-toggle="modal" data-target="#modal-editar-usuarios">Editar</a> 
+                                            <a href="" class="btn btn-cinza btn-small">Excluir</a>
+                                        </td>
+                                    </tr>
+                              </tbody>
+                            </table>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- Novo usuário -->
+<div class="modal fade" id="modal-usuarios-novo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Novo usuário</h4>
+      </div>
+      <div class="modal-body">
+            <form>   
+                <div class="row">          
+                    <div class="form-group col-md-5">
+                        <label for="nome-profissional">nome do profissional</label>
+                        <input type="text" class="form-control" id="nome-profissional" placeholder="">
+                    </div>  
+                    <div class="form-group col-md-5">
+                        <label for="cargo-profissional">Cargo do profissional</label>
+                        <select class="form-control" id="cargo-profissional" >
+                            <option value="" selected>Selecione...</option>s
+                            <option value="nutricionista" >Nutricionista</option>
+                            <option value="medica" >Médica</option>
+                            <option value="secretaria" >Secretária</option>
+                         
+                        </select>
+                    </div> 
+                    <div class="form-group col-md-5">
+                        <label for="email-profissional">Email</label>
+                        <input type="email" class="form-control" id="email-profissional" placeholder="">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="senha-profissional">Senha</label>
+                        <input type="password" class="form-control" id="senha-profissional" placeholder="">
+                    </div>
+                </div> 
+                <div class="clearfix"></div>
+
+                <div class="horarios">
+                    <h5>Horários</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">SEGUNDA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                                <option value="" selected>Selecione...</option>
+                                <option value="" >07:00</option>
+                                <option value="" >08:00</option>
+                                <option value="" >09:00</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">TERÇA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">QUARTA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">QUINTA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">SEXTA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <h5>Tempo de consulta</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="dia-semana-segunda">Primeira vez</label>
+                                <select class="form-control" id="dia-semana-segunda" >
+                                    <option value="" selected>Selecione...</option>
+                                    <option value="" >20 minutos</option>
+                                    <option value="" >30 minutos</option>
+                                    <option value="" >40 minutos</option>
+                                </select>
+                            </div> 
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="dia-semana-segunda">Retorno</label>
+                                <select class="form-control" id="dia-semana-segunda" >
+                                    <option value="" selected>Selecione...</option>
+                                    <option value="" >20 minutos</option>
+                                    <option value="" >30 minutos</option>
+                                    <option value="" >40 minutos</option>
+                                </select>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-verde pull-right btn-modal">Adicionar usuário</button>
+                <div class="clearfix"></div>
+            </form>
+
+
+
+
+
+
+
+      </div>
+   
+    </div>
+  </div>
+</div>
+
+
+<!-- Editar usuário -->
+<div class="modal fade" id="modal-editar-usuarios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Editar usuário</h4>
+      </div>
+      <div class="modal-body">
+            <form>   
+                <div class="row">          
+                    <div class="form-group col-md-5">
+                        <label for="nome-profissional">nome do profissional</label>
+                        <input type="text" class="form-control" id="nome-profissional" placeholder="">
+                    </div>  
+                    <div class="form-group col-md-5">
+                        <label for="cargo-profissional">Cargo do profissional</label>
+                        <select class="form-control" id="cargo-profissional" >
+                            <option value="" selected>Selecione...</option>s
+                            <option value="nutricionista" >Nutricionista</option>
+                            <option value="medica" >Médica</option>
+                            <option value="secretaria" >Secretária</option>
+                         
+                        </select>
+                    </div> 
+                    <div class="form-group col-md-5">
+                        <label for="email-profissional">Email</label>
+                        <input type="email" class="form-control" id="email-profissional" placeholder="">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="senha-profissional">Senha</label>
+                        <input type="password" class="form-control" id="senha-profissional" placeholder="">
+                    </div>
+                </div> 
+                <div class="clearfix"></div>
+
+                <div class="horarios">
+                    <h5>Horários</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">SEGUNDA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">TERÇA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">QUARTA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">QUINTA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="dia-semana" for="dia-semana-segunda">SEXTA-FEIRA</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="dia-semana-segunda" >
+                            <option value="" selected>Selecione...</option>
+                            <option value="" >07:00</option>
+                            <option value="" >08:00</option>
+                            <option value="" >09:00</option>
+                        </select>
+                        </div>
+                    </div>
+                    <h5>Tempo de consulta</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="dia-semana-segunda">Primeira vez</label>
+                                <select class="form-control" id="dia-semana-segunda" >
+                                    <option value="" selected>Selecione...</option>
+                                    <option value="" >20 minutos</option>
+                                    <option value="" >30 minutos</option>
+                                    <option value="" >40 minutos</option>
+                                </select>
+                            </div> 
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="dia-semana-segunda">Retorno</label>
+                                <select class="form-control" id="dia-semana-segunda" >
+                                    <option value="" selected>Selecione...</option>
+                                    <option value="" >20 minutos</option>
+                                    <option value="" >30 minutos</option>
+                                    <option value="" >40 minutos</option>
+                                </select>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-verde pull-right btn-modal">Editar</button>
+                <div class="clearfix"></div>
+            </form>
+      </div>
+   
+    </div>
+  </div>
+</div>
+
+
+
+        <!-- ============================================
+        ============== Vendor JavaScripts ===============
+        ============================================= -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/jquery/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- Page Specific Scripts
+        <script>
+            $(window).load(function(){
+
+
+            });
+        </script>
+        / Page Specific Scripts -->
+
+    </body>
+</html>

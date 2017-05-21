@@ -1,0 +1,214 @@
+//UNDERLINE-INPUT
+@mixin underline-input {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  -webkit-appearance: none !important;
+  vertical-align: middle;
+  padding-left: 0;
+  border-color: $cor-cinza-medio;
+
+  &:focus:hover {
+    border: 0;
+    border-bottom: 1px solid $cor-rosa;
+  }
+}
+
+form {
+	&.form-login {
+		background-color: $cor-branca;
+		border-bottom: 3px solid $cor-cinza-medio;
+		padding: 25px;
+		margin-top: 30px;
+    min-height: 250px;
+
+		.form-group {
+			&.group-btns {
+				margin: 30px 0 45px;
+			}
+			
+		}
+
+		.form-control {
+			@include underline-input;
+			box-shadow: none;
+
+
+			@include placeholder {
+				@include transition(color .2s linear);
+				color: $cor-cinza-texto;
+				font-style: italic;
+				line-height: 20px;
+			}
+		}
+		a {
+			@include transition(color .2s linear);
+			color: $cor-cinza-texto-70;
+
+			&:hover {
+				
+				text-decoration: none;
+				color: $cor-cinza;
+			}
+		}
+	}
+
+  &.form-busca {
+    .form-group {
+      margin-right: -4px;
+      
+      .form-control {
+        background: none;
+
+          
+      }
+      input {
+        @include border-radius(2px 0 0 2px);
+        margin: 0;
+      }
+    }
+    button {
+      @include border-radius(0 2px 2px 0);
+      margin:0;
+      background: none;
+    }
+  }
+
+  label.dia-semana {
+    line-height: 31px;
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.horarios {
+  background-color: $cor-cinza-medio;
+  margin: 25px -15px 15px;
+  padding: 15px ;
+
+  h5 {
+    color: $cor-rosa;
+    text-transform: uppercase;
+    @include font-lato-400;
+    font-size: 13px;
+  }
+  p.alerta {
+      color: #e53529;
+      @include font-lato-300;
+      font-size: 13px;
+    }
+}
+
+
+/*//validations
+
+.form-validation .form-control {
+  &.has-focus+.help-block {
+    display:none;
+  }
+  &.has-visited:not(.has-focus)+.help-block {
+    display:block;
+  }
+  &.ng-dirty.ng-invalid,
+  &.ng-dirty.ng-invalid[type="checkbox"]+i {
+    border-color: $lighter-red;
+    &+.help-block {
+      color: $lighten-red;
+    }
+  }
+  &.ng-dirty.ng-valid {
+    border-color: $lighter-green;
+    &+.help-block {
+      color: $lighten-green;
+    }
+  }
+}
+
+.has-error {
+  .form-control,
+  .form-control:focus {
+    @include box-shadow(none);
+    border-color: $lighter-red;
+
+    &.has-focus {
+      border-color: $cyan;
+    }
+    &.has-visited:not(.has-focus) {
+      border-color: $lighter-red;
+    }
+  }
+  .control-label,
+  .help-block {
+    color: $lighten-red;
+  }
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    color: $font-color;
+  }
+  .checkbox-custom>i,
+  .checkbox-custom:hover>i {
+    border-color: $lighter-red;
+  }
+}
+
+.has-success {
+  .form-control,
+  .form-control:focus {
+    @include box-shadow(none);
+    border-color: $lighter-green;
+
+    &.has-focus {
+      border-color: $cyan;
+    }
+    &.has-visited:not(.has-focus) {
+      border-color: $lighter-green;
+    }
+  }
+  .control-label,
+  .help-block {
+    color: $lighten-green;
+  }
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    color: $font-color;
+  }
+  .checkbox-custom>i {
+    border-color: $lighter-green;
+  }
+}
+
+.has-warning {
+  .form-control,
+  .form-control:focus {
+    @include box-shadow(none);
+    border-color: $lighter-orange;
+
+    &.has-focus {
+      border-color: $cyan;
+    }
+    &.has-visited:not(.has-focus) {
+      border-color: $lighter-orange;
+    }
+  }
+  .control-label,
+  .help-block {
+    color: $lighten-orange;
+  }
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    color: $font-color;
+  }
+  .checkbox-custom>i {
+    border-color: $lighter-orange;
+  }
+}
+*/
